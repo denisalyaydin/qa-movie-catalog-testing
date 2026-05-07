@@ -1,0 +1,258 @@
+{
+  "info": {
+    "_postman_id": "0097848c-a430-4656-b56e-6ba72a2d73fc",
+    "name": "MoviesAppExam",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53549687",
+    "_collection_link": "https://go.postman.co/collection/53549687-0097848c-a430-4656-b56e-6ba72a2d73fc?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "CreateUser",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"userName\": \"userFromPostman123\",\r\n    \"firstName\": \"userPostman\",\r\n    \"lastName\": \"Postman\",\r\n    \"email\": \"usertestpostman@example.com\",\r\n    \"password\": \"password\",\r\n    \"rePassword\": \"password\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://144.91.123.158:5000/api/User/Register",
+          "protocol": "http",
+          "host": [
+            "144",
+            "91",
+            "123",
+            "158"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "User",
+            "Register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LoginUser",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"usertestpostman@example.com\",\r\n    \"password\": \"password\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://144.91.123.158:5000/api/User/Authentication",
+          "protocol": "http",
+          "host": [
+            "144",
+            "91",
+            "123",
+            "158"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "User",
+            "Authentication"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "AddMovie",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"movieFromPostman\",\r\n    \"description\": \"test\",\r\n    \"posterUrl\": \"\",\r\n    \"trailerLink\": \"\",\r\n    \"isWatched\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://144.91.123.158:5000/api/Movie/Create",
+          "protocol": "http",
+          "host": [
+            "144",
+            "91",
+            "123",
+            "158"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "Movie",
+            "Create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetAllMovies",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"movieFromPostman\",\r\n    \"description\": \"test\",\r\n    \"posterUrl\": \"\",\r\n    \"trailerLink\": \"\",\r\n    \"isWatched\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://144.91.123.158:5000/api/Catalog/All",
+          "protocol": "http",
+          "host": [
+            "144",
+            "91",
+            "123",
+            "158"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "Catalog",
+            "All"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "EditTitleOfMovie",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"editedFromPostman\",\r\n    \"description\": \"edited\",\r\n    \"posterUrl\": \"\",\r\n    \"trailerLink\": \"\",\r\n    \"isWatched\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://144.91.123.158:5000/api/Movie/Edit?movieId=ef68528a-aec6-40e3-dcfe-08de76979b7f",
+          "protocol": "http",
+          "host": [
+            "144",
+            "91",
+            "123",
+            "158"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "Movie",
+            "Edit"
+          ],
+          "query": [
+            {
+              "key": "movieId",
+              "value": "ef68528a-aec6-40e3-dcfe-08de76979b7f"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteMovie",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"editedFromPostman\",\r\n    \"description\": \"edited\",\r\n    \"posterUrl\": \"\",\r\n    \"trailerLink\": \"\",\r\n    \"isWatched\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://144.91.123.158:5000/api/Movie/Delete?movieId=ef68528a-aec6-40e3-dcfe-08de76979b7f",
+          "protocol": "http",
+          "host": [
+            "144",
+            "91",
+            "123",
+            "158"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "Movie",
+            "Delete"
+          ],
+          "query": [
+            {
+              "key": "movieId",
+              "value": "ef68528a-aec6-40e3-dcfe-08de76979b7f"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI0Y2M0ZmI5ZC02Y2Q4LTQ3YWQtOWE1My0wZjVkYzg2ODI2ZjkiLCJpYXQiOiIwNC8xOC8yMDI2IDA5OjUyOjMxIiwiVXNlcklkIjoiY2Y0NmUyN2EtZDVjMC00NGMyLTY0NDMtMDhkZTc2OTcxYWI5IiwiRW1haWwiOiJ1c2VydGVzdHBvc3RtYW5AZXhhbXBsZS5jb20iLCJVc2VyTmFtZSI6InVzZXJGcm9tUG9zdG1hbjEyMyIsImV4cCI6MTc3NjUyNzU1MSwiaXNzIjoiTW92aWVDYXRhbG9nX0FwcF9Tb2Z0VW5pIiwiYXVkIjoiTW92aWVDYXRhbG9nX1dlYkFQSV9Tb2Z0VW5pIn0.XbUeP5hn1njkKZZadMaep1fqe7o5GJqcuYmkBfaeceA",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
