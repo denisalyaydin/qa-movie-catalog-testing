@@ -1,5 +1,3 @@
-# qa-movie-catalog-testing
-
 # QA Testing Project – Movie Catalog Web Application
 
 ## Description
